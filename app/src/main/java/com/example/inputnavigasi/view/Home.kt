@@ -30,6 +30,13 @@ fun HomeScreen(
             horizontalAlignment = Alignment.CenterHorizontally
         ){
             Spacer(Modifier.height(32.dp))
+
+            Text(
+                "Selamat Datang",
+                fontSize = dimensionResource(R.dimen.font_medium).value.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color.Black
+            )
         }
     }
 }
