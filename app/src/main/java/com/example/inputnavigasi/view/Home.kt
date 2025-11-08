@@ -25,7 +25,7 @@ import com.example.inputnavigasi.R
 
 @Composable
 fun HomeScreen(
-//    onStartClick: () -> Unit
+    onStartClick: () -> Unit
 ){
     Box(
         Modifier.fillMaxSize()) {
@@ -79,13 +79,13 @@ fun HomeScreen(
                     .padding(bottom = dimensionResource(R.dimen.padding_small))
                     .fillMaxWidth()
             )
-            Spacer(Modifier.height(132.dp))
+            Spacer(Modifier.height(72.dp))
         }
         Button(
-            onClick = {},
+            onClick = onStartClick,
             modifier = Modifier
                 .align(Alignment.BottomCenter)
-                .padding(dimensionResource(R.dimen.padding_medium), bottom = 60.dp)
+                .padding(dimensionResource(R.dimen.padding_medium))
                 .fillMaxWidth()
                 .height(52.dp)
         ) {

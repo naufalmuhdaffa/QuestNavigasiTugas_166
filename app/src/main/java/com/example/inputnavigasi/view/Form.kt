@@ -20,7 +20,7 @@ import com.example.inputnavigasi.R
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FormScreen(
-//    onBerandaClick: () -> Unit
+    onBerandaClick: () -> Unit
 ) {
     var nama by remember { mutableStateOf("") }
     var alamat by remember { mutableStateOf("") }
@@ -39,7 +39,7 @@ fun FormScreen(
 
     Scaffold(
         bottomBar = {
-            BottomAppBar {
+            BottomAppBar{
                 Row(
                     modifier =
                         Modifier
@@ -48,7 +48,7 @@ fun FormScreen(
                     horizontalArrangement = Arrangement.spacedBy(12.dp)
                 ) {
                     OutlinedButton(
-                        onClick = {},
+                        onClick = onBerandaClick,
                         modifier = Modifier.weight(1f)
                     ) {
                         Text("Beranda")
@@ -200,19 +200,19 @@ fun FormScreen(
             title = { Text("Data Berhasil Disimpan") },
             text = {
                 Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
-                    Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                    Row(Modifier.fillMaxWidth()) {
                         Text("Nama : ", fontWeight = FontWeight.SemiBold)
                         Text(nama)
                     }
-                    Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                    Row(Modifier.fillMaxWidth()) {
                         Text("Jenis Kelamin : ", fontWeight = FontWeight.SemiBold)
                         Text(jenis)
                     }
-                    Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                    Row(Modifier.fillMaxWidth()) {
                         Text("Status : ", fontWeight = FontWeight.SemiBold)
                         Text(statusPk)
                     }
-                    Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                    Row(Modifier.fillMaxWidth()) {
                         Text("Alamat : ", fontWeight = FontWeight.SemiBold)
                         Text(alamat)
                     }

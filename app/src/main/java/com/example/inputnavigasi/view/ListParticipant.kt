@@ -14,8 +14,8 @@ import com.example.inputnavigasi.R
 
 @Composable
 fun ListParticipantScreen(
-//    onBerandaClick: () -> Unit,
-//    onFormulirClick: () -> Unit
+    onBerandaClick: () -> Unit,
+    onFormulirClick: () -> Unit
 ) {
     Scaffold(
         bottomBar = {
@@ -27,11 +27,11 @@ fun ListParticipantScreen(
                     horizontalArrangement = Arrangement.spacedBy(12.dp)
                 ) {
                     OutlinedButton(
-                        onClick = {}, modifier = Modifier.weight(1f)
+                        onClick = onBerandaClick, modifier = Modifier.weight(1f)
                     ) { Text("Beranda") }
 
                     OutlinedButton(
-                        onClick = {}, modifier = Modifier.weight(1f)
+                        onClick = onFormulirClick, modifier = Modifier.weight(1f)
                     ) { Text("Formulir") }
                 }
             }
