@@ -37,6 +37,8 @@ fun HomeScreen(
                 fontWeight = FontWeight.Bold,
                 color = Color.Black
             )
+
+            Spacer(Modifier.weight(1f))
         }
     }
 }
